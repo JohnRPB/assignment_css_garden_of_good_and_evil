@@ -23,7 +23,8 @@ app.get('/', (req, res) => {
     morals: 'good',
     food: 'spaghetti',
     color: 'blue',
-    sanity: '1'
+    sanity: '1',
+    good: (preferences.morals === 'good')
   };
   res.render('index', { preferences });
 });

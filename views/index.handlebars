@@ -1,4 +1,4 @@
-<div id="container" class={{preferences.color}}>
+<div id="container" class={{preferences.morals}}>
   <form action='/' method='post'>
 
     <div id='radio'>
@@ -25,26 +25,54 @@
 
   <div id="main-hidden">
 
+  {{#if preferences.good}}
+
   <div id = "list-container">
     <div id = "likes">
-      <ul>
+      <ul> Things you like
         <li>Favorite color</li>
         <li>Favorite food</li>
         <li>Smooth jazz</li>
-        <li>Roket pops</li>
+        <li>Chuck Norris</li>
         <li>Klondike bars</li>
       </ul>
     </div>
     <div id = "dislikes">
-      <ul>
+      <ul> Things you hate
         <li>Murder</li>
         <li>Nascar</li>
         <li>Voldemort</li>
-        <li>Volvos</li>
+        <li>Martha Stewart</li>
         <li>Flatulence</li>
       </ul>
     </div>
   </div>
+
+  {{else}}
+  
+  <div id = "list-container">
+    <div id = "likes">
+      <ul> Things you like
+        <li>Favorite color</li>
+        <li>Favorite food</li>
+        <li>Country rap</li>
+        <li>Chuck Norris</li>
+        <li>Klondike bars</li>
+      </ul>
+    </div>
+    <div id = "dislikes">
+      <ul> Things you hate
+        <li>Murder</li>
+        <li>Nascar</li>
+        <li>Voldemort</li>
+        <li>Martha Stewart</li>
+        <li>Flatulence</li>
+      </ul>
+    </div>
+  </div>
+
+
+  {{/if}}
 
   <article id='biography'>
     <h2>Your Biography</h2>
