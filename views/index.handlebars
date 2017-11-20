@@ -10,7 +10,7 @@
     <input id='evil' type='radio' name='morals' value='evil'>
     </div>
 
-
+    <input id='real-name' name='name' type='text'>
     <input type='text' name='food' value='favorite-food'>
 
     <select name='color'>
@@ -30,7 +30,7 @@
   {{#if preferences.good}}
 
   <div id = "list-container">
-    <div id = "likes">
+    <div class = "good likes">
       <ul> Things you like
         <li>{{preferences.color}}</li>
         <li>{{preferences.food}}</li>
@@ -39,7 +39,7 @@
         <li>Klondike bars</li>
       </ul>
     </div>
-    <div id = "dislikes">
+    <div class = "good dislikes">
       <ul> Things you hate
         <li>Murder</li>
         <li>Nascar</li>
@@ -53,22 +53,22 @@
   {{else}}
 
   <div id = "list-container">
-    <div id = "likes">
+    <div class = "evil likes">
       <ul> Things you like
-        <li>Favorite color</li>
-        <li>Favorite food</li>
+        <li>Dark {{preferences.color}}</li>
+        <li>{{preferences.food}}</li>
         <li>Country rap</li>
-        <li>Chuck Norris</li>
-        <li>Klondike bars</li>
+        <li>Rick Astley</li>
+        <li>Public Transportation</li>
       </ul>
     </div>
-    <div id = "dislikes">
+    <div class = "evil dislikes">
       <ul> Things you hate
-        <li>Murder</li>
-        <li>Nascar</li>
-        <li>Voldemort</li>
-        <li>Martha Stewart</li>
-        <li>Flatulence</li>
+        <li>Mary Poppins</li>
+        <li>Red Headed children</li>
+        <li>Christmas Cheer/Eggnog</li>
+        <li>Punctuality</li>
+        <li>Public Transportation</li>
       </ul>
     </div>
   </div>
@@ -94,17 +94,21 @@
    <article>
 
      <header>
-          <h1>Johann Baptista | Software Engineer</h1>
+          <h1>{{preferences.name}} | Software Engineer</h1>
           <address>
-            <p>1601 Colusa Avenue</p>
-            <p>Davis, CA, 95616</p>
-            <p><a href = "mailto:baptistajohann@gmail.com">baptistajohann@gmail.com</a></p>
+            <p>1455 Nobody Cares Lane</p>
+            <p>Dundlehuffer, CA 12345</p>
+            <p><a href = "www.google.com">WhatsMyNameAgain@gmail.com</a></p>
             <hr>
           </address>
         </header>
         <section>
           <h2>Goals</h2>
-          <p>To obtain employment at a startup as a full-stack software engineer</p>
+          {{#if preferences.isInsane}}
+          <p>To obtain 1-Bajillion-Gajillion dollars for tacos!</p>
+          {{else}}
+          <p>To obtain ${{preferences.sanity}}0 for tacos.</p>
+          {{/if}}
         </section>
         <section>
           <h2>Skills</h2>
@@ -124,50 +128,27 @@
                 <th>Location</th>
                 <th>Position</th>
                 <th>Responsibilities</th>
-                <th>Contact Info</th>
               </tr>
             </thead>
             <tr>
-              <td>2014-2016</td>
-              <td>Willamette University</td>
-              <td>Salem, OR</td>
-              <td>Private Tutor</td>
-              <td>Tutor students in math and statistics</td>
-              <td>Matt Barrero 503-XXX-XXXX</td>
-            <tr>
-            <tr>
-              <td>2016-2017</td>
-              <td>Willamette University</td>
-              <td>Salem, OR</td>
-              <td>QUAD Assistant</td>
-              <td>Drop-in tutoring in math and statistics</td>
-              <td>Jim Friedrick 503-XXX-XXXX</td>
+              <td>Time immemorial to tomorrow.</td>
+              <td>Crayola Corp.</td>
+              <td>Kindergarten</td>
+              <td>District Supervisor of {{preferences.color}}.</td>
+              <td>Ensured the appropriate respect of {{preferences.color}}.</td>
             <tr>
           </table>
         </section>
         <section>
 
         </section>
-        <section>
-          <h2>Hobbies and Interests</h2>
-          <ol>
-            <li>Data analysis</li>
-            <li>Irish flute</li>
-            <li>Long coats</li>
-          </ol>
-        </section>
+
         <section>
           <h2>References</h2>
           <p>Available upon request</p>
+          <img src='./images/color-bosses.jpeg'>
         </section>
-        <footer>
-           <address>
-            <p>1601 Colusa Avenue</p>
-            <p>Davis, CA, 95616</p>
-            <p><a href = "mailto:baptistajohann@gmail.com">baptistajohann@gmail.com</a></p>
-            <hr>
-          </address>
-        </footer>
+
 
    </article>
 

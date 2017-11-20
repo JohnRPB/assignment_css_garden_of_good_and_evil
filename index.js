@@ -23,9 +23,13 @@ app.get('/', (req, res) => {
     morals: 'good',
     food: 'spaghetti',
     color: 'blue',
-    sanity: '1'
+    sanity: '1',
+    name: ''
   };
   preferences.good = preferences.morals === 'good';
+  preferences.isInsane = () => {
+    return preferences.sanity > 7;
+  };
   res.render('index', { preferences });
 });
 
@@ -34,7 +38,8 @@ app.post('/', (req, res) => {
     morals: req.body.morals,
     food: req.body.food,
     color: req.body.color,
-    sanity: req.body['insanity-level']
+    sanity: req.body['insanity-level'],
+    name: req.body.name
   };
   res.cookie('preferences', preferences);
   console.log(preferences);
