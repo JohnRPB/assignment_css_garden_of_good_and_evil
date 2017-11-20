@@ -1,11 +1,20 @@
 .good {
-
-  background-color:yellow;
-
+  background-color: yellow;
+  font-family: ;
 }
 
 .evil {
+  background-color: purple;
+  font-family: ;
+}
 
-  background-color:purple;
+.good.title {
+  font-famiy: arial;
+}
 
+.evil.title {
+  font-family: fantasy;
+}
+
+form {
 }

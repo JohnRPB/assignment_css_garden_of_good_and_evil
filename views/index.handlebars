@@ -1,9 +1,11 @@
+<h1 class='{{preferences.morals}} title'>Garden of Good and Evil!</h1>
+
 <div id="container" class={{preferences.morals}}>
   <form action='/' method='post'>
 
     <div id='radio'>
     <label for='good'>Good</label>
-    <input id='good' type='radio' name='morals' value='good'>
+    <input id='good' type='radio' name='morals' value='good' checked='checked'>
     <label for='evil'>Evil</label>
     <input id='evil' type='radio' name='morals' value='evil'>
     </div>
@@ -30,8 +32,8 @@
   <div id = "list-container">
     <div id = "likes">
       <ul> Things you like
-        <li>Favorite color</li>
-        <li>Favorite food</li>
+        <li>{{preferences.color}}</li>
+        <li>{{preferences.food}}</li>
         <li>Smooth jazz</li>
         <li>Chuck Norris</li>
         <li>Klondike bars</li>
@@ -49,7 +51,7 @@
   </div>
 
   {{else}}
-  
+
   <div id = "list-container">
     <div id = "likes">
       <ul> Things you like
@@ -76,16 +78,19 @@
 
   <article id='biography'>
     <h2>Your Biography</h2>
-    <p id='good'>Born in a cloud on Christmas Eve, you decended to Earth on
+
+    {{#if preferences.good}}
+    <p class='good'>Born in a cloud on Christmas Eve, you decended to Earth on
       the wings of a ladybug, to start a renewable energy company, and you
       always use prettier for code organization.</p>
-
-    <p id='bad'>Born from a canned bean dinner and lack of pepto bismo, you
+      {{else}}
+    <p class='evil'>Born from a canned bean dinner and lack of pepto bismol, you
       torment dreams of the elderly, and janitors everywhere. You use eclipse
       as your text editor, and write 20 line comments. You also troll the aspca's
      youTube page, daily.</p>
-   </article>
 
+   </article>
+   {{/if}}
    <article>
 
      <header>

@@ -23,9 +23,9 @@ app.get('/', (req, res) => {
     morals: 'good',
     food: 'spaghetti',
     color: 'blue',
-    sanity: '1',
-    good: (preferences.morals === 'good')
+    sanity: '1'
   };
+  preferences.good = preferences.morals === 'good';
   res.render('index', { preferences });
 });
 
