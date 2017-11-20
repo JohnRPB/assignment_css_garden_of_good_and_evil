@@ -1,5 +1,5 @@
-<div id="container">
-  <form action='/' method='get'>
+<div id="container" class={{preferences.color}}>
+  <form action='/' method='post'>
 
     <div id='radio'>
     <label for='good'>Good</label>
@@ -11,7 +11,7 @@
 
     <input type='text' name='food' value='favorite-food'>
 
-    <select>
+    <select name='color'>
       <option>Red</option>
       <option>Blue</option>
       <option>Yellow</option>
@@ -20,6 +20,7 @@
 
     <input id="insanity-level" name="insanity-level" type="range" min="1" max="10">
 
+    <input type='submit' value='Submit!!!!'>
   </form>
 
   <div id="main-hidden">
@@ -112,7 +113,7 @@
           </table>
         </section>
         <section>
-  
+
         </section>
         <section>
           <h2>Hobbies and Interests</h2>

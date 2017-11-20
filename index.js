@@ -19,13 +19,25 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-  const preferences = {
-    const morals = req.body.morals;
-    const food = req.body.food;
-    const color = req.
+  let preferences = req.cookies.preferences || {
+    morals: 'good',
+    food: 'spaghetti',
+    color: 'blue',
+    sanity: '1'
   };
-  preferences.
-  res.render('index');
+  res.render('index', { preferences });
+});
+
+app.post('/', (req, res) => {
+  const preferences = {
+    morals: req.body.morals,
+    food: req.body.food,
+    color: req.body.color,
+    sanity: req.body['insanity-level']
+  };
+  res.cookie('preferences', preferences);
+  console.log(preferences);
+  res.redirect('/');
 });
 
 app.listen(4200, () => {
