@@ -9,8 +9,10 @@
     <label for='evil'>Evil</label>
     <input id='evil' type='radio' name='morals' value='evil'>
     </div>
-
+    <br>
+    <label for="name">Name</label>
     <input id='real-name' name='name' type='text'>
+    <label for="food">Food</label>
     <input type='text' name='food' value='favorite-food'>
 
     <select name='color'>
@@ -20,12 +22,13 @@
       <option>Chartreuse</option>
     </select>
 
+    <label for="insanity-level">Insanity Level</label>
     <input id="insanity-level" name="insanity-level" type="range" min="1" max="10">
 
     <input type='submit' value='Submit!!!!'>
   </form>
 
-  <div id="main-hidden">
+  <div class={{preferences.hidden}}>
 
   {{#if preferences.good}}
 
@@ -107,7 +110,7 @@
           {{#if preferences.isInsane}}
           <p>To obtain 1-Bajillion-Gajillion dollars for tacos!</p>
           {{else}}
-          <p>To obtain ${{preferences.sanity}}0 for tacos.</p>
+          <p>To obtain a salary of ${{preferences.sanity}}0,000.</p>
           {{/if}}
         </section>
         <section>

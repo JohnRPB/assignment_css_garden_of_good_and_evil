@@ -11,6 +11,12 @@ body div {
 }
 
 #radio {
+  display: flex;
+  flex-direction: row;
+}
+
+.iffy {
+  background-color:gray;
 }
 
 .good {
@@ -33,4 +39,13 @@ body div {
 
 article {
   margin: 50px;
+}
+
+.hidden {
+   display:none;
+}
+
+form {
+  display-flex;
+  flex-direction:column;
 }

@@ -20,11 +20,12 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
   let preferences = req.cookies.preferences || {
-    morals: 'good',
+    morals: 'iffy',
     food: 'spaghetti',
     color: 'blue',
     sanity: '1',
-    name: ''
+    name: '',
+    hidden: 'hidden'
   };
   preferences.good = preferences.morals === 'good';
   preferences.isInsane = () => {
@@ -39,7 +40,8 @@ app.post('/', (req, res) => {
     food: req.body.food,
     color: req.body.color,
     sanity: req.body['insanity-level'],
-    name: req.body.name
+    name: req.body.name,
+    hidden: 'default'
   };
   res.cookie('preferences', preferences);
   console.log(preferences);
